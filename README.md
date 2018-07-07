@@ -1,4 +1,4 @@
-#Rent Easy 
+# Rent Easy 
 > Rent Easy is created as part of Udacity nano degree program. App is for demonstration purpose
 
 
@@ -16,10 +16,10 @@ Rent Easy is centralized platform where you can select the products offered by o
     - User will pay deposit while ordering and pay rents monthly
     - User can track the orders and pay rent amount
 
-## App can be downloaded from [here](https://www.amazon.com/Rupesh-Padhye-Rent-Easy/dp/B01M5IDOYG/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1530965429&sr=1-1&keywords=rent+easy)
+### App can be downloaded from [here](https://www.amazon.com/Rupesh-Padhye-Rent-Easy/dp/B01M5IDOYG/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1530965429&sr=1-1&keywords=rent+easy)
 
 ### local Setup
- - Add the app in Firebase
+ - create new android app in Firebase
  - Download google json file and put inside app folder 
  - import dummy database from `renteasy-dummy-data.json` to the own Firebase account
 
