@@ -1,0 +1,1 @@
+keytool -list -v -keystore <file-name> -alias <alias name>

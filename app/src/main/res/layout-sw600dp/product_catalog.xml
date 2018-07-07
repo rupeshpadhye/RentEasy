@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.6"
+    android:orientation="vertical">
+    <android.support.design.widget.TabLayout
+        android:id="@+id/product_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable"
+        app:tabGravity="center"
+        />
+
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/product_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </android.support.v4.view.ViewPager>
+</LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_weight="0.4"
+       android:orientation="vertical"
+       >
+       <FrameLayout
+           android:id="@+id/productDetailFragment"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginTop="36dp"
+           android:layout_weight="0.1"
+           ></FrameLayout>
+       <fragment
+           android:id="@+id/fragment_forecast"
+           android:name="com.renteasy.views.fragments.CheckoutFooterFragment"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="0.8"
+           tools:layout="@layout/checkout_footer"
+           />
+   </LinearLayout>
+
+</LinearLayout>

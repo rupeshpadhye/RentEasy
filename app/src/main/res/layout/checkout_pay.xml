@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp"
+    >
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        cardview:cardCornerRadius="4dp"
+        cardview:cardElevation="@dimen/cardview_default_radius"
+        android:id="@+id/pay_block"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="4dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/checkout_msg"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/depositLayout"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:textStyle="bold"
+                    style="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:text="@string/deposit_amount"
+                    />
+
+                <TextView
+                    android:id="@+id/deposit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:textStyle="bold"
+                    style="@style/Base.TextAppearance.AppCompat.Medium"
+                    />
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pay"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                />
+            <TextView
+                android:id="@+id/successful_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/green"
+                android:text="@string/successful_message"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

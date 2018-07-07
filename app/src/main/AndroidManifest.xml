@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.renteasy">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <activity
+            android:name=".views.activity.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".views.activity.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+        </activity
+            >
+        <activity
+            android:name=".views.activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan"
+            android:imeOptions="flagNoExtractUi"
+            >
+
+        </activity>
+
+        <activity android:name=".views.activity.HomeCartActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".views.activity.ProductCatalogActivity"
+            android:parentActivityName=".views.activity.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.activity.MainActivity" />
+        </activity>
+        <activity android:name=".views.activity.ProductHomeCartActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.activity.ProductCatalogActivity" />
+        </activity>
+
+        <activity
+            android:name=".views.activity.ProductDetailActivity"
+            android:parentActivityName=".views.activity.ProductCatalogActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.activity.ProductCatalogActivity" />
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".views.activity.CheckOutActivity"
+            android:parentActivityName=".views.activity.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.activity.MainActivity" />
+        </activity>
+
+        <provider android:name=".provider.RentEasyContentProvider"
+            android:authorities="com.renteasy">
+        </provider>
+
+        <service
+            android:name=".service.ProductIntentService"
+            android:exported="false" />
+
+        <service
+            android:name=".views.widget.HotDealsService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"  />
+
+        <receiver android:name=".views.widget.HotDealsWidget"
+            android:label="@string/hot_deals"
+            >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.color.appwidget.list.UPDATE_LIST" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_deal_of_day" />
+        </receiver>
+
+        <receiver android:name=".views.widget.RentEasySmallWidget"
+            android:label="@string/app_name"
+            >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_small" />
+        </receiver>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin"
+    android:id="@+id/widget_clicker"
+    >
+
+    <LinearLayout
+        android:id="@+id/widgetLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/widgetImgLauncher"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/app_name"
+            />
+
+        <LinearLayout
+            android:id="@+id/widgetTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/widget_margin"
+            android:paddingLeft="@dimen/widget_margin"
+            android:paddingRight="@dimen/widget_margin"
+            android:paddingStart="@dimen/widget_margin"
+            android:paddingEnd="@dimen/widget_margin"
+            android:paddingTop="16dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hot_deals"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/antiFlashWhite"
+                android:textStyle="bold"
+                android:contentDescription="@string/hot_deals" />
+        </LinearLayout>
+       <!-- <Button
+            android:id="@+id/update_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            />-->
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/widget_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/widgetLayoutMain"
+        android:textDirection="anyRtl"
+
+        />
+
+   <TextView
+        android:background="@color/antiFlashWhite"
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_deals"
+        android:layout_below="@+id/widgetLayoutMain"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        />
+
+
+</RelativeLayout>
+
