@@ -6,7 +6,7 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.renteasy.database.DatabaseContract;
 import com.renteasy.database.DatabaseHelper;

@@ -3,7 +3,7 @@ package com.renteasy.presenters;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 
 import com.renteasy.constant.AppConstant;
 import com.renteasy.entity.ProductDetail;

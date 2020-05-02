@@ -9,7 +9,7 @@
     >
 
     <!--temp tabMinWidth set RupeshP  app:tabMinWidth="300dp"-->
-    <android.support.design.widget.TabLayout
+    <com.google.android.material.tabs.TabLayout
         android:id="@+id/product_tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,14 +17,14 @@
         app:tabGravity="center"
         />
 
-    <android.support.v4.view.ViewPager
+    <androidx.viewpager.widget.ViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/product_pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.3"
         >
-    </android.support.v4.view.ViewPager>
+    </androidx.viewpager.widget.ViewPager>
     <fragment
         android:id="@+id/fragment_forecast"
         android:name="com.renteasy.views.fragments.CheckoutFooterFragment"
